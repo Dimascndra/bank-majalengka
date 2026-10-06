@@ -188,6 +188,41 @@
     }
 
     /**
+     * Calculate loan installments for flat or decreasing interest.
+     * @param {number} plafond - Loan amount in Rupiah
+     * @param {number} tenorBulan - Loan duration in months
+     * @param {number|string} tipe - 1 for Flat, 2 for Menurun (effective/decreasing)
+     * @param {number} [annualRate] - Annual interest rate (default: 12% / 0.12)
+     * @returns {Object} { pokok, bunga, total }
+     */
+    function calculateLoanSimulation(plafond, tenorBulan, tipe, annualRate) {
+        if (!plafond || !tenorBulan || tenorBulan <= 0 || plafond <= 0) {
+            return { pokok: 0, bunga: 0, total: 0 };
+        }
+
+        annualRate = annualRate !== undefined ? annualRate : 0.12; // 12% per year
+        var monthlyRate = annualRate / 12;
+        var pokokPerBulan = Math.round(plafond / tenorBulan);
+        var bungaPerBulan = 0;
+
+        if (String(tipe) === '1') {
+            // Bunga Flat: bunga tetap per bulan dihitung dari total plafond awal
+            bungaPerBulan = Math.round(plafond * monthlyRate);
+        } else {
+            // Bunga Menurun: bulan pertama dihitung dari sisa plafond penuh
+            bungaPerBulan = Math.round(plafond * monthlyRate);
+        }
+
+        var totalPerBulan = pokokPerBulan + bungaPerBulan;
+
+        return {
+            pokok: pokokPerBulan,
+            bunga: bungaPerBulan,
+            total: totalPerBulan
+        };
+    }
+
+    /**
      * Bind dynamic currency formatting to #plafond loan input.
      */
     function initPlafondFormatting() {
@@ -204,6 +239,71 @@
                 });
             }
         }
+    }
+
+    /**
+     * Initialize interactive loan simulation form submission (#frmSimulasi).
+     */
+    function initLoanSimulation() {
+        var form = document.getElementById('frmSimulasi');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var plafondEl = document.getElementById('plafond');
+            var tenorEl = document.getElementById('jangka_waktu');
+            var tipeEls = document.getElementsByName('tipe');
+
+            var rawPlafond = plafondEl ? plafondEl.value.replace(/[^0-9]/g, '') : '0';
+            var plafond = parseFloat(rawPlafond) || 0;
+            var tenor = parseInt(tenorEl ? tenorEl.value : '0', 10) || 0;
+
+            var tipe = '2'; // Default Menurun
+            for (var i = 0; i < tipeEls.length; i++) {
+                if (tipeEls[i].checked) {
+                    tipe = tipeEls[i].value;
+                    break;
+                }
+            }
+
+            if (plafond <= 0 || tenor <= 0) {
+                return;
+            }
+
+            var btnSubmit = document.getElementById('btnSubmitSimulasi');
+            var originalBtnText = btnSubmit ? btnSubmit.innerHTML : 'Hitung Simulasi';
+
+            if (btnSubmit) {
+                btnSubmit.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Menghitung...';
+                btnSubmit.disabled = true;
+            }
+
+            setTimeout(function () {
+                var result = calculateLoanSimulation(plafond, tenor, tipe);
+
+                var fmtPokok = formatRupiah(result.pokok, 'Rp. ');
+                var fmtBunga = formatRupiah(result.bunga, 'Rp. ');
+                var fmtTotal = formatRupiah(result.total, 'Rp. ');
+
+                var tipeNama = String(tipe) === '1' ? 'Flat' : 'Menurun (Bulan ke-1)';
+
+                var textHasilEl = document.getElementById('text-hasil');
+                var pokokEl = document.getElementById('angsuran-pokok');
+                var bungaEl = document.getElementById('angsuran-bunga');
+                var totalEl = document.getElementById('total-angsuran');
+
+                if (textHasilEl) textHasilEl.textContent = 'Hasil Simulasi Angsuran Bunga (' + tipeNama + ') :';
+                if (pokokEl) pokokEl.textContent = 'Angsuran Pokok : ' + fmtPokok;
+                if (bungaEl) bungaEl.textContent = 'Angsuran Bunga : ' + fmtBunga;
+                if (totalEl) totalEl.textContent = 'Total Angsuran : ' + fmtTotal;
+
+                if (btnSubmit) {
+                    btnSubmit.innerHTML = originalBtnText;
+                    btnSubmit.disabled = false;
+                }
+            }, 200);
+        });
     }
 
     /**
@@ -230,6 +330,8 @@
     window.truncateNewsDescriptions = truncateNewsDescriptions;
     window.initCarousels = initCarousels;
     window.initAntiFraudModal = initAntiFraudModal;
+    window.calculateLoanSimulation = calculateLoanSimulation;
+    window.initLoanSimulation = initLoanSimulation;
 
     // DOM Ready initialization
     function onReady() {
@@ -239,6 +341,7 @@
         initBackToTop();
         initCopyrightYear();
         initPlafondFormatting();
+        initLoanSimulation();
         initAOS();
     }
 
