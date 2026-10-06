@@ -168,7 +168,10 @@
     function initBackToTop() {
         var mybutton = document.getElementById('btn-back-to-top');
         if (mybutton) {
-            mybutton.addEventListener('click', function () {
+            mybutton.addEventListener('click', function (e) {
+                if (e && e.preventDefault) {
+                    e.preventDefault();
+                }
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'

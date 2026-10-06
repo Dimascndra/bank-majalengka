@@ -14,7 +14,8 @@ class TestSecondaryPages(unittest.TestCase):
             "pages/kredit.html",
             "pages/simulasi-kredit.html",
             "pages/informasi.html",
-            "pages/kontak.html"
+            "pages/kontak.html",
+            "pages/pengaduan-nasabah.html"
         ]
 
     def test_secondary_pages_structure(self):
