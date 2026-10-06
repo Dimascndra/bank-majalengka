@@ -196,10 +196,10 @@ def main():
     print("BANK MAJALENGKA 1:1 UI CLONE - COMPREHENSIVE E2E VERIFICATION")
     print("=" * 70)
 
-    # 1. Run unit test suite
-    print("\n--- 1. Running Unit Test Suite ---")
+    print("\n--- 1. Running Comprehensive Unit & E2E Test Suite ---")
     loader = unittest.TestLoader()
     suite = loader.discover(os.path.join(BASE_DIR, "tests"))
+    suite.addTests(loader.loadTestsFromTestCase(VerifyAll))
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
 
