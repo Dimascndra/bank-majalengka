@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!-- Import custom stylesheet -->
+    <link rel="stylesheet" href="../assets/css/website.css">
+
+    <!-- Import AOS -->
+    <link rel="stylesheet" href="../assets/css/aos.css">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
+
+    <title>Simulasi Kredit - Bank Majalengka</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Topbar Container -->
+        <div class="container" id="top">
+            <div class="row py-4">
+                <div class="col-6">
+                    <a href="../index.html">
+                        <img class="logo-bank" src="../assets/img/Logo-Bank-Majalengka.png" alt="logo-bank-majalengka.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <div class="bg-blue">
+            <nav class="container navbar navbar-expand-lg navbar-expand-md">
+                <div class="container-fluid">
+                    <div class="hidden-md text-white">
+                        <p class="menu-title-hidden mb-0">Beranda</p>
+                        <p class="menu-title-hidden mb-0">Sejarah</p>
+                        <p class="menu-title-hidden mb-0">Visi & Misi</p>
+                        <p class="menu-title-hidden mb-0">Dewan Direktur</p>
+                        <p class="menu-title-hidden mb-0">Logo & Arti Logo</p>
+                        <p class="menu-title-hidden mb-0">Simpanan</p>
+                        <p class="menu-title-hidden mb-0">Kredit</p>
+                        <p class="menu-title-hidden mb-0">Informasi</p>
+                        <p class="menu-title-hidden mb-0 menu-title-show">Simulasi Kredit</p>
+                        <p class="menu-title-hidden mb-0">Laporan Publikasi</p>
+                        <p class="menu-title-hidden mb-0">Laporan Tahunan</p>
+                        <p class="menu-title-hidden mb-0">Laporan Tata Kelola</p>
+                        <p class="menu-title-hidden mb-0">Kontak</p>
+                        <p class="menu-title-hidden mb-0">Pengaduan Nasabah</p>
+                    </div>
+                    <button class="navbar-toggler btn-hamburg ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-grid-3x3-gap-fill align-top"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+                        </svg>
+                    </button>
+                    <div class="collapse navbar-collapse align-items-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item d-md-none d-lg-block">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="../index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-link py-2 ps-0 pe-4 pe-md-3 pe-lg-4 menu m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tentang
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down fw-bold"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu bg-blue dropdown-bpr">
+                                    <li><a class="menu p-3" href="tentang/sejarah.html">Sejarah</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="tentang/visi-misi.html">Visi & Misi</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="tentang/dewan-direktur.html">Dewan Direktur</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="tentang/arti-logo.html">Logo & Arti Logo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="simpanan.html">Simpanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="kredit.html">Kredit</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="informasi.html">Informasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu menu-active" href="simulasi-kredit.html">Simulasi Kredit</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-link py-2 ps-0 pe-4 pe-md-3 pe-lg-4 menu m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Laporan
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down fw-bold"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu bg-blue dropdown-bpr" style="--bs-dropdown-min-width: 12rem;">
+                                    <li><a class="menu p-3" href="../index.html#laporan-publikasi">Laporan Publikasi</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="../index.html#laporan-tahunan">Laporan Tahunan</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="../index.html#laporan-tata-kelola">Laporan Tata Kelola</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="../index.html#piagam-audit-internal">Piagam Audit Internal</a>
+                                        <hr class="mx-3 my-2 border-white" style="opacity: 0.75;">
+                                    </li>
+                                    <li><a class="menu p-3" href="../index.html#rakb">Laporan RAKB</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="kontak.html">Kontak</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ps-0 pe-4 pe-md-3 pe-lg-4 menu" href="pengaduan-nasabah.html">Pengaduan Nasabah</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Banner Header -->
+        <div class="header-main">
+            <div class="overlay-header d-flex align-items-center">
+                <div class="container text-white">
+                    <h1 class="fw-bold mb-2">Simulasi Kredit</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="../index.html" class="link-white">Beranda</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Simulasi Kredit</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <main id="main">
+            <div class="container py-5 my-3">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">KALKULATOR PINJAMAN</span>
+                        <h2 class="color-blue fw-bold mb-3">Hitung Rencana Pinjaman Anda</h2>
+                        <p class="text-secondary lh-lg mb-4">
+                            Kalkulator simulasi kredit membantu Anda memperkirakan besaran angsuran pokok dan bunga setiap bulan berdasarkan nominal permohonan pinjaman serta jangka waktu yang diinginkan.
+                        </p>
+
+                        <div class="card border-0 shadow-sm p-4 bg-light rounded-4 mb-3">
+                            <h5 class="fw-bold color-blue mb-2">Metode Perhitungan Bunga</h5>
+                            <ul class="text-secondary small mb-0 ps-3 lh-lg">
+                                <li><strong>Bunga Flat:</strong> Angsuran pokok dan bunga sama besarnya setiap bulan sepanjang tenor kredit.</li>
+                                <li><strong>Bunga Menurun:</strong> Bunga dihitung dari saldo sisa pinjaman pokok (bunga menurun seiring pembayaran).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7" data-aos="fade-left">
+                        <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4 bg-white">
+                            <h3 class="fw-bold color-red mb-4">SIMULASI KREDIT</h3>
+                            <form id="frmSimulasi">
+                                <div class="mb-3">
+                                    <label for="plafond" class="form-label fw-bold">Plafond Pinjaman (Rp)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light fw-bold">Rp</span>
+                                        <input type="text" class="form-control" id="plafond" name="plafond" placeholder="Contoh: 10.000.000" required>
+                                    </div>
+                                    <div class="form-text">Masukkan jumlah nominal pinjaman yang ingin diajukan.</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="jangka_waktu" class="form-label fw-bold">Jangka Waktu (Bulan)</label>
+                                    <select class="form-select" id="jangka_waktu" name="jangka_waktu" required>
+                                        <option value="6">6 Bulan</option>
+                                        <option value="12" selected>12 Bulan (1 Tahun)</option>
+                                        <option value="24">24 Bulan (2 Tahun)</option>
+                                        <option value="36">36 Bulan (3 Tahun)</option>
+                                        <option value="48">48 Bulan (4 Tahun)</option>
+                                        <option value="60">60 Bulan (5 Tahun)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold d-block">Pilihan Jenis Bunga</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipe" id="tipeFlat" value="1">
+                                        <label class="form-check-label" for="tipeFlat">Angsuran Bunga Flat</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipe" id="tipeMenurun" value="2" checked>
+                                        <label class="form-check-label" for="tipeMenurun">Angsuran Bunga Menurun</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-blue btn-lg w-100 mb-4 fw-bold" id="btnSubmitSimulasi">
+                                    Hitung Simulasi
+                                </button>
+                            </form>
+
+                            <div id="hasil" class="p-3 bg-light rounded-3 border">
+                                <p id="text-hasil" class="fw-bold mb-2 color-blue"></p>
+                                <p id="angsuran-pokok" class="mb-1 fw-semibold"></p>
+                                <p id="angsuran-bunga" class="mb-1 fw-semibold"></p>
+                                <p id="total-angsuran" class="mb-0 fs-5 fw-bold color-red"></p>
+                            </div>
+
+                            <p class="text-danger small mt-3 mb-0">
+                                *) Silahkan isi Data di atas untuk melihat estimasi tagihan pinjaman.<br>
+                                **) Suku bunga acuan dapat berubah sewaktu-waktu sesuai ketentuan bank.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating Buttons: Back to top and WhatsApp -->
+        <div class="floating-btn">
+            <a class="mb-3" href="#" id="btn-back-to-top" rel="noreferrer noopener" aria-label="Kembali ke atas">
+                <img class="icon-circle" src="../assets/img/chevron-top.png" alt="chevron-top.png" width="45">
+            </a>
+            <br>
+            <br>
+            <a class="mb-3" href="tel:+6281122332600" target="_blank" rel="noreferrer noopener" aria-label="Hubungi WhatsApp">
+                <img class="icon-circle" src="../assets/img/whatsapp.png" alt="whatsapp.png" width="45">
+            </a>
+        </div>
+
+        <!-- Footer Area -->
+        <div class="bg-footer py-5">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-12 col-md-8 col-lg-5 mb-5">
+                        <h4 class="mb-4 color-red">Kontak Kami</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <img class="icon-circle me-3" width="40" src="../assets/img/phone-receiver-silhouette.png" alt="phone.png">
+                            +62811-1111-6526
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <img class="icon-circle me-3" width="40" src="../assets/img/email.png" alt="email.png">
+                            <span class="text-break">manajemenpusat@bprmajalengka.com</span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img class="icon-circle me-3" width="40" src="../assets/img/maps-and-flags.png" alt="map.png">
+                            Jl. Raya K H Abdul Halim No.338,<br> Majalengka Wetan, Kec. Majalengka,<br> Kabupaten Majalengka,<br> Jawa Barat
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 mb-5">
+                        <h4 class="mb-4 color-red">Tautan</h4>
+                        <a class="menu-footer mb-3" href="../index.html">Beranda</a>
+                        <a class="menu-footer mb-3" href="tentang/sejarah.html">Tentang</a>
+                        <a class="menu-footer mb-3" href="simpanan.html">Layanan</a>
+                        <a class="menu-footer mb-3" href="informasi.html">Informasi</a>
+                        <a class="menu-footer mb-3" href="simulasi-kredit.html">Simulasi Kredit</a>
+                        <a class="menu-footer mb-3" href="../index.html#laporan-publikasi">Publikasi</a>
+                        <a class="menu-footer mb-3" href="kontak.html">Kontak</a>
+                        <a class="menu-footer mb-3" href="pengaduan-nasabah.html">Pengaduan Nasabah</a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5">
+                        <h4 class="mb-4 color-red">Sosial Media:</h4>
+                        <a href="https://www.facebook.com/bank.majalengka?mibextid=ZbWKwL" target="_blank" rel="noreferrer noopener" aria-label="Facebook Bank Majalengka">
+                            <img class="logo-footer icon-circle me-2" src="../assets/img/facebook-app-symbol.png" alt="facebook.png" width="20">
+                        </a>
+                        <a href="https://instagram.com/bankmajalengka?igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noreferrer noopener" aria-label="Instagram Bank Majalengka">
+                            <img class="logo-footer icon-circle p-2 me-2" src="../assets/img/instagram.png" alt="instagram.png" width="20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue">
+            <div class="container text-center text-white py-3 font-copyright">
+                Pemerintah Daerah Kabupaten Majalengka - Perumda BPR Majalengka <span id="copyright">2026</span> | Mitra Kerja Membangun Ekonomi Rakyat<br>
+                Perumda BPR Majalengka berizin dan diawasi oleh Otoritas Jasa Keuangan &amp; Bank Indonesia <br>
+                Perumda BPR Majalengka merupakan peserta penjaminan Lembaga Penjamin Simpanan (LPS). Maksimum nilai simpanan yang dijamin LPS per Nasabah per Bank adalah Rp2 Miliar. <br>
+                Untuk cek Tingkat Bunga Penjaminan LPS, klik <a class="text-white" href="informasi.html" target="_blank" rel="noreferrer noopener">di sini</a>.<br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: jQuery, Popper/Bootstrap bundle, Slick, AOS, Main -->
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/fslightbox.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
